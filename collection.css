@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+nav a{
+    border: 2px solid rgb(98, 56, 23);
+    border-radius: 30px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgb(98, 56, 23);
+    background-color: transparent;
+    font-family: 'Cinzel';
+}
+nav p{
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Dancing Script';
+    color: rgba(115, 66, 28, 0.97);
+    text-shadow:1px 4px 4px  rgba(25, 25, 25, 0.759) ;
+}
+.menu{
+    background-color: transparent;
+    border: none;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.curve{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(98, 56, 23);
+    height: 500px;
+    width: 95%;
+    margin-top: 50px;
+    border-radius: 30px;
+    clip-path: polygon(0% 50%, 5% 56%, 10% 62%, 15% 66%, 20% 69%, 25% 70%, 30% 69%, 35% 66%, 40% 62%, 45% 56%, 50% 50%, 55% 44%, 60% 38%, 65% 34%, 70% 31%, 75% 30%, 80% 31%, 85% 34%, 90% 38%, 95% 44%, 100% 50%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 50%, 5% 56%, 10% 62%, 15% 66%, 20% 69%, 25% 70%, 30% 69%, 35% 66%, 40% 62%, 45% 56%, 50% 50%, 55% 44%, 60% 38%, 65% 34%, 70% 31%, 75% 30%, 80% 31%, 85% 34%, 90% 38%, 95% 44%, 100% 50%, 100% 100%, 0% 100%);
+}
+
+.curve1{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(201, 179, 162);
+    height:500px;
+    width: 95%;
+    margin-top: 50px;
+    border-radius: 30px;
+  clip-path: polygon(0% 50%, 5% 56%, 10% 62%, 15% 66%, 20% 69%, 25% 70%, 30% 69%, 35% 66%, 40% 62%, 45% 56%, 50% 50%, 55% 44%, 60% 38%, 65% 34%, 70% 31%, 75% 30%, 80% 31%, 85% 34%, 90% 38%, 95% 44%, 100% 50%, 100% 0%, 0% 0%);
+  -webkit-clip-path: polygon(0% 50%, 5% 56%, 10% 62%, 15% 66%, 20% 69%, 25% 70%, 30% 69%, 35% 66%, 40% 62%, 45% 56%, 50% 50%, 55% 44%, 60% 38%, 65% 34%, 70% 31%, 75% 30%, 80% 31%, 85% 34%, 90% 38%, 95% 44%, 100% 50%, 100% 0%, 0% 0%);
+}
+
+section{
+    display: flex;
+    justify-content: flex-end;
+    align-items:center ;
+}
+section img{
+    object-fit: cover;
+    margin-top: -500px;
+    margin-right: 10%;
+    z-index: 1;
+    border-radius: 30px;
+}
+
+article{
+    display:flex;
+    justify-content: start;
+    align-items: flex-start;
+}
+article p{
+    width: 50%;
+    margin-left: 10%;
+    margin-top:-25%;
+    z-index: 1;
+    font-size: 1.5rem;
+    font-family: 'Dancing Script';
+    font-weight: 500;
+}
+
+.arrows-body{
+    position: relative;
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+}
+    .arrow {
+      width: 40px;
+      height: 40px;
+      border-left: 5px solid #060606;
+      border-bottom: 5px solid #060606;
+      transform: rotate(-45deg);
+      animation: bounceDown 2s infinite;
+    }
+
+    @keyframes bounceDown {
+      0% {
+        transform: rotate(-45deg) translate(0, 0);
+        opacity: 1;
+      }
+      50% {
+        transform: rotate(-45deg) translate(-10px, 10px);
+        opacity: 0.6;
+      }
+      100% {
+        transform: rotate(-45deg) translate(0, 0);
+        opacity: 1;
+      }
+    }
+
+.container {
+            min-height: 300px;
+            width: 100%; 
+            height: 500px;
+            /* background-color: pink; */
+            display: flex;
+            flex-direction: row; 
+            flex-wrap: wrap; 
+            gap: 20px;
+            align-items: center;
+            justify-content: center; 
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        
+.item {
+            /* border: 2px solid rgb(98, 56, 23); */
+            filter:drop-shadow(0 2px 4px rgba(0, 0, 0, 0.955)) ;
+            border-radius: 15px;
+            width: 250px; 
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: rgb(98, 56, 23);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+
+.item:hover{
+      transform: translateY(-20px);
+}
