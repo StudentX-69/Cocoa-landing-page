@@ -3,174 +3,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: rgba(240, 200, 240, 0.991);
-}
-h3{
-    font-family: 'Cinzel';
-    color: rgb(78, 37, 10);
-    margin-left:3%;
-    font-size:50px ; 
-    margin-top: 3%;
-    
-}
+ body {
+            background-color: rgba(240, 200, 240, 0.99);
+            overflow-x: hidden;
+        }
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        .font-dancing { font-family: 'Dancing Script', cursive; }
+        .font-cormorant { font-family: 'Cormorant Garamond', serif; }
+        .font-raleway { font-family: 'Raleway', sans-serif; }
 
-h2{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 26%;
-    font-family: 'Dancing Script';
-    font-size: 4rem;
-    color: hotpink;
-    text-shadow: 2px 5px white;
-    margin-top: -6%;
-    overflow: hidden;
-}
-.curvy-line {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 600px; /* Adjust based on how far down the image is */
-  z-index: -1;   /* Places it behind your text/image */
-  pointer-events: none;
-  shape-rendering: geometricPrecision; /* Allows users to click "through" the line */
-}
-.curvy-line path {
-  /* Use a hex code, rgb, or a named color */
-  stroke:hotpink; /* A nice dark chocolate brown */
-  
-  /* You can also adjust the thickness here */
-  stroke-width: 0.4; 
-  
-  /* Optional: make it fade out slightly */
-  stroke-opacity: 0.5;
-}
-/* #blur{
-   filter: blur(0.9px);
-} */
-.nav{
-    display: flex;
-    justify-content: center;
-}
-.nav a{
-    margin-top: -3%;
-    padding:2px 15px;
-    margin-right: 5% ;
-    text-decoration: none;
-    text-transform:uppercase;
-    font-family:'Cinzel';
-    font-weight: 600;
-    font-size: 22px;
-    color: rgb(71, 35, 10);
-}
-nav a:hover{
-    color: black;
-    text-decoration: underline;
-}
+        .curvy-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.3;
+        }
 
-.btn{
-    float: right;
-    margin: -60px 100px;
-   
-}
-#Cart{
-   border: none;
-   padding: 13px 20px 13px 23px;
-   border-radius: 25px;
-   background-color: rgb(206, 145, 244);
-   color:rgb(20, 9, 2);
-   font-size: 20px;
-   box-shadow: 0 4px 5px rgba(27, 26, 26, 0.897);
-   font-family: 'Cinzel';
-}
+        /* Custom Clip Path for the decorative curve */
+        .curve-decoration {
+            background-color: rgba(240, 200, 240, 0.99);
+            clip-path: polygon(0% 50%, 5% 56%, 10% 62%, 15% 66%, 20% 69%, 25% 70%, 30% 69%, 35% 66%, 40% 62%, 45% 56%, 50% 50%, 55% 44%, 60% 38%, 65% 34%, 70% 31%, 75% 30%, 80% 31%, 85% 34%, 90% 38%, 95% 44%, 100% 50%, 100% 0%, 0% 0%);
+        }
 
-.sider{
-    display: flex;
-  justify-content: flex-end; /* Pushes content to the right */
-  align-items: center;      /* Centers it vertically if needed */
-}
-.sider img{
-    object-fit:contain ;
-    filter: drop-shadow(1vh);
+        .btn-shadow {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn-shadow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
 
-}
-.curve{
-    background-color:  rgba(240, 200, 240, 0.991);
-    height: 200px;
-    width: 340px;
-    margin-top: -36%;
-    margin-right: 4.9% ;
-    float: right;
-  clip-path: polygon(0% 50%, 5% 56%, 10% 62%, 15% 66%, 20% 69%, 25% 70%, 30% 69%, 35% 66%, 40% 62%, 45% 56%, 50% 50%, 55% 44%, 60% 38%, 65% 34%, 70% 31%, 75% 30%, 80% 31%, 85% 34%, 90% 38%, 95% 44%, 100% 50%, 100% 0%, 0% 0%);
-  -webkit-clip-path: polygon(0% 50%, 5% 56%, 10% 62%, 15% 66%, 20% 69%, 25% 70%, 30% 69%, 35% 66%, 40% 62%, 45% 56%, 50% 50%, 55% 44%, 60% 38%, 65% 34%, 70% 31%, 75% 30%, 80% 31%, 85% 34%, 90% 38%, 95% 44%, 100% 50%, 100% 0%, 0% 0%);
-}
-
-.paragraph{
-    margin-top: -30%;
-    margin-left: 80px;
-    font-size: 3rem;
-    font-family:'Cormorant Garamond' ;
-    font-weight: bolder;
-    color: rgb(68, 31, 7);
-}
-.paragraph1{
-    margin-top: 10px ;
-    margin-left: 500px;
-    font-size: 3.3rem;
-    font-family:'Cormorant Garamond' ;
-    font-weight: bolder;
-    color: rgb(68, 31, 7);
-}
-.paragraph2{
-    margin-top: 10px ;
-    margin-left: 350px;
-    font-size: 3.5rem;
-    font-family:'Cormorant Garamond' ;
-    font-weight: bolder;
-    color: rgb(68, 31, 7);
-}
-.description{
-    height: 90%;
-    width: 20%;
-    padding: 5px;
-    float: right;
-    margin-top: -20%;
-    margin-right: 55px;
-    font-family: 'Cinzel';
-    line-height: 1.5;
-}
-.description button{
-    border: none;
-    padding: 15px ;
-    background-color: rgb(206, 145, 244);
-    border-radius: 30px;
-    box-shadow: 0 4px 6px rgba(27, 26, 26, 0.897);
-    font-family: 'Raleway';
-}
-
-.cocoa{
-    justify-content: center;
-    align-items: center;
-}
-.cocoa img{
-    object-fit: cover;
-    border-radius: 20px;
-    filter: drop-shadow(1vh);
-}
-.cocoa button{
-    border: none;
-    padding: 15px;
-    background-color: rgb(206, 145, 244);
-    border-radius: 50px;
-    box-shadow: 0 4px 6px rgba(27, 26, 26, 0.897);
-    font-family: 'Raleway';
-    cursor: pointer;
-}
-
+        .hero-img {
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+        }

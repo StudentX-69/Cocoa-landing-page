@@ -7,8 +7,45 @@
     <link rel="stylesheet" href="cart.css">
 </head>
 <body>
-    <div class="cart-img">
-        <img src="cart.js" alt="">
+   <div id="sidebar">
+        <span class="material-symbols-outlined close-btn" onclick="toggleSidebar()">close</span>
+        <h2 style="font-family: Cinzel; margin-top: 40px;">Menu</h2>
+        <ul style="list-style: none; margin-top: 20px;">
+            <li style="margin: 10px 0;"><a href="#" style="text-decoration: none; color: brown;">Home</a></li>
+            <li style="margin: 10px 0;"><a href="#" style="text-decoration: none; color: brown;">Products</a></li>
+            <li style="margin: 10px 0;"><a href="#" style="text-decoration: none; color: brown;">Contact</a></li>
+        </ul>
     </div>
+
+    <nav>
+        <button class="menu" onclick="toggleSidebar()">
+        <span class="material-symbols-outlined">menu</span>
+        </button>
+        <p>Monk</p>
+        <a href="#" id="cart-count">Cart (0)</a>
+    </nav>
+
+    <section>
+        <img src="chocolate2.png" alt="Lavender dark chocolate jelly">
+        
+        <div class="cart-details">
+            <h1 class="cart-item">Lavender Dark Chocolate Jelly</h1>
+            <p class="short-description">Bold 70% dark chocolate notes with a clean, botanical finish.</p>
+            <p class="description">Elevate your pantry with our signature Dark Chocolate Lavender Jelly. Crafted in small batches, this jelly transforms the ordinary into the extraordinary.</p>
+            
+            <div class="qty-container">
+                <div class="qty-controls">
+                    <button onclick="updateQty(-1)">-</button>
+                    <input type="number" id="qty-input" value="1" min="1" onchange="calculateTotal()">
+                    <button onclick="updateQty(1)">+</button>
+                </div>
+                <div class="price-label" id="price-display">$4.50</div>
+            </div>
+
+            <button class="addcart" onclick="addToCart()">Add to cart</button>  
+        </div>
+    </section>
+  <script src="cart.js"></script>
+</div>
 </body>
 </html>
