@@ -44,6 +44,14 @@
             cursor: pointer;
             color: rgb(98, 56, 23);
         }
+        #menu{
+            font-family: 'Cinzel';
+            font-size:1rem ;
+            font-weight: 700;
+        }
+        li:hover{
+             text-decoration: underline solid rebeccapurple;
+        }
 
         section {
             display: flex;
